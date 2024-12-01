@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="music.css">
+    <link rel="shortcut icon" href="./Image/favicon.png" type="image/x-icon">
+    <title>Meditation Music</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">MeditateZone</a>
+            <div class="menu">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="./music.html"><i class="fa-solid fa-music"></i> Music</a>
+                <a href="Scene.html"><i class="fa-solid fa-mountain"></i> Scene</a>
+                <a href="#"><i class="fa-solid fa-wind"></i> Breathe Well</a>
+                <a href="#"><i class="fa-solid fa-comments"></i> Talk To Hope</a>
+            </div>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" style="display: none;"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="musicContainer"></div>
+        <div class="video-container-body">
+            <button class="close-video-player"><i class="fa-solid fa-xmark"></i></button>
+            <div class="musicPlayerBox">
+                <p class="musicArtist">Artist Name</p>
+                <div class="imgContainer">
+                    <img src="./images/OmNamah.jpg" alt="Album Art">
+                </div>
+                <p class="musicSongName">Song Name</p>
+                <p class="musicSongAlbum">Album Name</p>
+                <div class="musicControls">
+                    <div class="musicProgressBar">
+                        <span class="musicCurrentTime">0:00</span>
+                    <input type="range" class="musicRangeSlider" min="0" max="100" value="0" step="1">
+                    <span class="musicTotalTime">0:00</span>
+                    </div>
+                    
+                    <div class="musicControlsButtons">
+                        <button class="muteButton">
+                            <i class="fa-solid fa-volume-high"></i>
+                          </button>
+                      <button class="play"><i class="fa-solid fa-circle-play playPauseBtn"></i></button>
+                          <button class="loopButton">
+                            <i  class="fa-solid fa-repeat"></i>
+                          </button>
+                    </div>
+                
+                  </div>
+            </div>
+            <audio></audio>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MeditateZone | All Rights Reserved | Sunny Kumar</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="music.js"></script>
+</body>
+</html>

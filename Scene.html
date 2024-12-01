@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scene.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./Image/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Background Video & Audio -->
+    <div class="background-container" style="display: none;">
+       
+            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+     
+        <video class="background-video" autoplay loop>
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <audio class="background-audio" autoplay loop style="display: none;">
+            Your browser does not support the audio tag.
+        </audio>
+        <div class="timer">
+            <button class="play-btn-bg"><i class="fa-solid fa-circle-play"></i></button>
+            <button class="pause-btn-bg"><i class="fa-solid fa-circle-pause"></i></button>
+            <p class="timer-option" data-time="2"></p>
+            <p class="timer-option" data-time="2">2 Minutes</p>
+            <p class="timer-option" data-time="5">5 Minutes</p>
+            <p class="timer-option" data-time="10">10 Minutes</p>
+            <div class="ti"><span id="minutes">00</span>:<span id="seconds">00</span></div>
+            <audio id="timer-audio" src="your-audio-file.mp3" preload="auto"></audio>
+        </div>
+    </div>
+   
+    
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">MeditateZone</a>
+            <div class="menu">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="./music.html"><i class="fa-solid fa-music"></i> Music</a>
+                <a href="Scene.html"><i class="fa-solid fa-mountain"></i> Scene</a>
+                <a href="#"><i class="fa-solid fa-wind"></i> Breathe Well</a>
+                <a href="#"><i class="fa-solid fa-comments"></i> Talk To Hope</a>
+            </div>            
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" style="color: red; display: none;"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="scene-container">
+            <div class="scene-content" data-video="scene gif audio/snow.mp4" data-audio="/scene gif audio/snow.mp3" data-title="Snow">
+                <img src="/Image/snow.jpg" alt="snow">
+                <h2>Snow</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="scene-content" data-video="scene gif audio/lake sunset.mp4" data-audio="/scene gif audio/lake sunset.mp3" data-title="Lake Sunset">
+                <img src="/Image/leak sunset.jpg" alt="lake sunset">
+                <h2>Lake Sunset</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="scene-content" data-video="scene gif audio/river forest.mp4" data-audio="/scene gif audio/river forest.mp3" data-title="River Forest">
+                <img src="/Image/river-forest.jpg" alt="river forest">
+                <h2>River Forest</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="scene-content" data-video="scene gif audio/rain.mp4" data-audio="/scene gif audio/rain.mp3" data-title="Rain">
+                <img src="/Image/rain.jpg" alt="rain">
+                <h2>Rain</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="scene-content" data-video="scene gif audio/mountain lake.mp4" data-audio="/scene gif audio/mountain lake.mp3" data-title="Mountain Lake">
+                <img src="/Image/montain lake.jpg" alt="mountain lake">
+                <h2>Mountain Lake</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+            <div class="scene-content" data-video="scene gif audio/waterfall.mp4" data-audio="/scene gif audio/waterfall.mp3" data-title="Waterfall">
+                <img src="/Image/waterfall.jpg" alt="waterfall">
+                <h2>Waterfall</h2>
+                <button class="play-btn"><i class="fa-solid fa-circle-play"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MeditateZone | All Rights Reserved | Sunny Kumar</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="scene.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: 'Arial', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    background: #f7f8fa;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Music Container */
+.musicContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Music Player Box */
+.musicPlayerBox {
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.musicPlayerBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.musicPlayerBox img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto 20px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+}
+
+/* Play Button in Music Player Box */
+.musicPlayerBox .musicPlayBtn {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.musicPlayerBox .musicPlayBtn:hover {
+    background: #45a049;
+}
+
+/* Video Player Overlay */
+.video-container-body {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Close Button for Video Player */
+.video-container-body .close-video-player {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4b5c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.video-container-body .close-video-player:hover {
+    background: #e04353;
+}
+
+
+.video-container-body .imgContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.video-container-body .imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.playPauseContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.playPauseBtn {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.playPauseBtn:hover {
+    background: #45a049;
+}
+
+
+.musicControls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Progress Bar Styling */
+.musicProgressBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.musicProgressBar span {
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.musicRangeSlider {
+    flex-grow: 1;
+    height: 4px;
+    width: 80%;
+    background: #333;
+    border-radius: 5px;
+    outline: none;
+    -webkit-appearance: none;
+    margin: 0 10px;
+    transition:  0.3s ease;
+}
+
+.musicRangeSlider:hover {
+    background: #444;
+}
+
+.musicRangeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.musicRangeSlider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #4caf50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Controls Buttons Styling */
+.musicControlsButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.musicControlsButtons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.play i {
+    color: #cecece;
+}
+
+.play i:hover {
+    color: #ffffff;
+}
+.muteButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.muteButton i:hover {
+    color: #ff5722;
+}
+.loopButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+
+.loopButton i:hover {
+    color: #888;
+}
+
+.loopButton.active i {
+    color: green;
+}
+
+  
+/* Animation for Music Playback */
+.musicAnimation {
+    animation: rotation 5s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .musicPlayerBox {
+        width: 90%;
+    }
+
+    .video-container-body .imgContainer {
+        width: 150px;
+        height: 150px;
+    }
+}

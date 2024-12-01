@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #1a1a1a, #111); /* Dark gradient background */
+}
+
+/* Hero Section Styling */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url(./Image/background.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark transparent background */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-size: 1.8em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff; /* Vibrant green */
+    text-shadow: 0 0 10px #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo::first-letter {
+    color: #20fc03; /* Bright purple */
+    text-shadow: 0 0 20px #0bfc03c0;
+    font-size: 1.5em;
+    transform: rotate(-10deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Menu Links */
+.menu {
+    display: flex;
+    align-items: center;
+    transform: 0.5s ease-in-out;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1em;
+    color: #ffffff; /* Vibrant green */
+    text-shadow: 0 0 10px #3EFC03;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    &>i{
+        color: #3EFC03; /* Vibrant green */
+        text-shadow: 0 0 10px #3EFC03;
+    }
+}
+
+.menu a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #C103FC, 0 0 30px #3EFC03;
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+
+
+/* Hero Content */
+.hero-content h1 {
+    font-size: 3.5em;
+    text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #fc7b03;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    color: #03fc03; /* Bright purple */
+    text-transform: uppercase;
+    text-shadow: 0 0 15px #000000;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+    text-shadow: 0 0 15px #1a1919, 0 0 30px #fc580c, 0 0 45px #f78d03;
+}
+
+/* Button Styling */
+.hero-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background: linear-gradient(45deg, #3EFC03, #C103FC); /* Green to purple gradient */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 10px #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #C103FC, 0 0 30px #3EFC03;
+}
+
+/* Feature Section */
+.features {
+    background: linear-gradient(135deg, #111, #1a1a1a); /* Dark gradient */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #fff;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #fff;
+}
+
+.feature-box i {
+    font-size: 2.5em;
+    color: #3EFC03; /* Vibrant green */
+    text-shadow: 0 0 10px #3EFC03;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Bright purple */
+}
+
+.feature-box p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1em;
+}
+
+footer .social-links a {
+    color: #fc0303; /* Bright purple */
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #C103FC;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer .social-links a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #C103FC;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Hide the menu by default on small screens */
+    /* Hamburger Menu Sliding Animation */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hidden off-screen */
+    width: 40%; /* Adjust width as needed */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2em;
+    padding: 100px 20px;
+    transition: right 0.5s ease; /* Smooth sliding animation */
+    z-index: 50;
+}
+
+/* When the menu is active, slide it in */
+.menu.active {
+    right: 0; /* Bring the menu into view */
+
+}
+
+    
+
+    .hamburger {
+        display: block;
+        position: relative; /* Position the hamburger icon relatively to its container**/
+       transform: 0.3s ease-in-out;
+        z-index: 100;
+    }
+    .hamburger:active{
+        transform: rotate(360deg); /* Rotate the hamburger icon when clicked */
+    }
+
+    /* Show the menu when the "active" class is added */
+    .menu.active {
+        display: flex;
+
+    }
+
+    .menu a {
+        margin: 15px 20px;   
+    }
+  
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+}
