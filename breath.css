@@ -1,0 +1,181 @@
+/* General Section Styling */
+main {
+    position: relative;
+    top: 50px;
+    height: 90vh;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4caf50;
+    margin-bottom: 2rem;
+}
+
+/* Section Styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Start Button */
+section button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+section button:hover {
+    background-color: #45a049;
+}
+
+section button:active {
+    transform: scale(0.95);
+}
+
+/* Full-Screen Breathing Div Styling */
+.deep-brathex{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.four-seven-eight {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+/* Breathing Circle Styling */
+.breathing-circle {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(76, 175, 80, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.breathing-circle1 {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(76, 175, 80, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Breathing Circle Animation */
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+        background-color: rgba(76, 175, 80, 0.5);
+    }
+    33%, 66% {
+        transform: scale(1.5);
+        background-color: rgba(76, 175, 80, 0.7);
+    }
+}
+@keyframes breathe478 {
+    0%, 21% {
+        transform: scale(1); /* Inhale start */
+        background-color: rgba(76, 175, 80, 0.5);
+    }
+    21%, 58% {
+        transform: scale(1.5); /* Hold */
+        background-color: rgba(76, 175, 80, 0.7);
+    }
+    100% {
+        transform: scale(1); /* Exhale */
+        background-color: rgba(76, 175, 80, 0.5);
+    }
+}
+
+.breathing-circle1 ,.breathing-circle{
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* Circle Text */
+.circle-text {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Timer Styling */
+.timer {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* Close Icon Styling */
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-icon:hover {
+    color: #ff0000;
+}

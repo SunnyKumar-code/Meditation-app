@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="breath.css">
     <link rel="shortcut icon" href="./Image/favicon.png" type="image/x-icon">
     <title>Meditation Music</title>
 </head>
@@ -26,39 +26,42 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="musicContainer"></div>
-        <div class="video-container-body">
-            <button class="close-video-player"><i class="fa-solid fa-xmark"></i></button>
-            <div class="musicPlayerBox">
-                <p class="musicArtist">Artist Name</p>
-                <div class="imgContainer">
-                    <img src="./images/OmNamah.jpg" alt="Album Art">
-                </div>
-                <p class="musicSongName">Song Name</p>
-                <p class="musicSongAlbum">Album Name</p>
-                <div class="musicControls">
-                    <div class="musicProgressBar">
-                        <span class="musicCurrentTime">0:00</span>
-                    <input type="range" class="musicRangeSlider" min="0" max="100" value="0" step="1">
-                    <span class="musicTotalTime">0:00</span>
-                    </div>
-                    
-                    <div class="musicControlsButtons">
-                        <button class="muteButton">
-                            <i class="fa-solid fa-volume-high"></i>
-                          </button>
-                      <button class="play"><i class="fa-solid fa-circle-play playPauseBtn"></i></button>
-                          <button class="loopButton">
-                            <i  class="fa-solid fa-repeat"></i>
-                          </button>
-                    </div>
-                
-                  </div>
-            </div>
-            <audio></audio>
+    
+    <div class="deep-brathex">
+        <span class="close-icon">&times;</span>
+        <div class="breathing-circle" >
+            <div class="circle-text">Inhale</div>
         </div>
+    </div>
+    
+    <div class="four-seven-eight">
+        <span class="close-icon" id="close-icon">&times;</span>
+        <div class="breathing-circle1">
+            <div class="circle-text1"></div>
+            <div class="timer1">4</div>
+        </div>
+    </div>
+    
+    <main>
+        <h1>Breathing Exercise</h1>
+        <section class="deep-breath">
+            <div>
+                <h2>Deep Breathing Exercise</h2>
+                <p>Deep breathing is one of the best ways to relax and let your worries go.</p>
+                <a href="https://www.healthline.com/health/diaphragmatic-breathing">Read More</a>
+            </div>
+            <button class="start-button" id="startButtonDeep" data-exercise="deep-breath">Start</button>
+        </section>
+        <section class="four-seven-eight-breath">
+            <div>
+                <h2>4-7-8 Breathing Exercise</h2>
+                <p>This exercise involves focusing on your breath and using your body's automatic breathing to control your mind.</p>
+                <a href="https://www.healthline.com/health/4-7-8-breathing">Read More</a>
+            </div>
+            <button class="start-button" id="startButton478" data-exercise="four-seven-eight">Start</button>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 MeditateZone | All Rights Reserved | Sunny Kumar</p>
         <div class="social-links">
@@ -67,6 +70,7 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="music.js"></script>
+
+    <script src="breath.js"></script>
 </body>
 </html>
