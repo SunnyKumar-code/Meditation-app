@@ -3,7 +3,7 @@
 /* Main Container */
 main {
     min-height: 100vh;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
     background-color: #1e1e1e; /* Slightly lighter dark background */
