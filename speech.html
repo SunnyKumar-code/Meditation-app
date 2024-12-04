@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="speech.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./Image/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">MeditateZone</a>
+            <div class="menu">
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="./music.html"><i class="fa-solid fa-music"></i> Music</a>
+                <a href="Scene.html"><i class="fa-solid fa-mountain"></i> Scene</a>
+                <a href="breath.html"><i class="fa-solid fa-wind"></i> Breathe Well</a>
+                <a href="#"><i class="fa-solid fa-comments"></i> Talk To Hope</a>
+            </div>            
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" style="color: red; display: none;"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mic button and speech display elements -->
+    <div id="micButtonContainer">
+        <button id="micButton" title="Click to Speak">
+            <i class="fa fa-microphone"></i>
+        </button>
+        <div id="speechDisplay" style="display: none;">
+            <p id="speechOutput"></p>
+        </div>
+    </div>
+
+    <main>
+        <div class="heading">
+            <h1>Chat With Me</h1>
+            <p>Press the mic Button to speak</p>
+        </div>
+        <div class="text" id="texts">
+            <!-- Your chat messages will be displayed here -->
+            <p>Hello, I'm MeditateZone!</p>
+        </div>
+        <div class="tasks" id="task">
+            <!-- Greetings Section -->
+            <ul>
+                <h2>Greetings</h2>
+                <li>Hi</li>
+                <li>Hello</li>
+                <li>Hey</li>
+                <li>Good morning</li>
+                <li>Good afternoon</li>
+                <li>Good evening</li>
+                <li>Good night</li>
+                <li>What’s up?</li>
+                <li>Merry Christmas</li>
+                <li>Happy New Year</li>
+                <li>Happy Valentine’s Day</li>
+            </ul>
+        
+            <!-- Commands Section -->
+            <ul>
+                <h2>Commands</h2>
+                <li>Open Google</li>
+                <li>Open YouTube</li>
+                <li>Open Twitter</li>
+                <li>Open Facebook</li>
+                <li>Open Instagram</li>
+                <li>Open GitHub</li>
+                <li>Open w3schools</li>
+                <li>Open Stackoverflow</li>
+                <li>Open Spotify</li>
+                <li>Open Wikipedia</li>
+                <li>Tell me a joke</li>
+                <li>Give me a quote</li>
+                <li>Tell me a riddle</li>
+                <li>Tell me a tongue twister</li>
+                <li>Give me some advice</li>
+                <li>Give me a hug</li>
+                <li>Give me a haiku</li>
+                <li>Tell me interesting facts</li>
+            </ul>
+        
+            <!-- Questions Section -->
+            <ul>
+                <h2>Questions</h2>
+                <li>What is U Matter?</li>
+                <li>What is the time?</li>
+                <li>How are you?</li>
+                <li>Who are you?</li>
+                <li>What is your name?</li>
+                <li>What is your favorite color?</li>
+                <li>Are you happy?</li>
+                <li>Are you smart?</li>
+                <li>Are you stupid?</li>
+                <li>What do you want when you grow up?</li>
+                <li>Who lives in a pineapple under the sea?</li>
+                <li>Do you want to build a snowman?</li>
+                <li>Do you want to take over the world?</li>
+                <li>Do you love me?</li>
+            </ul>
+        
+            <!-- Compliments Section -->
+            <ul>
+                <h2>Compliments</h2>
+                <li>You’re amazing</li>
+                <li>You’re funny</li>
+                <li>You’re awesome</li>
+                <li>You’re wonderful</li>
+                <li>You are great</li>
+                <li>You are sweet</li>
+                <li>You’re the best</li>
+                <li>You’re beautiful</li>
+            </ul>
+        
+            <!-- Games Section -->
+            <ul>
+                <h2>Games</h2>
+                <li>Rock</li>
+                <li>Paper</li>
+                <li>Scissors</li>
+                <li>Guess the number</li>
+                <li>Word scramble</li>
+                <li>Trivia questions</li>
+            </ul>
+        
+            <!-- Miscellaneous Section -->
+            <ul>
+                <h2>Miscellaneous</h2>
+                <li>It’s my birthday!</li>
+                <li>May the force be with you</li>
+                <li>Use the force</li>
+                <li>Live long and prosper</li>
+                <li>I’ll be back</li>
+                <li>Why so serious?</li>
+                <li>Is this the real life?</li>
+                <li>Never gonna give you up</li>
+                <li>See you later, alligator</li>
+                <li>Roses are red, violets are blue</li>
+                <li>Knock, knock</li>
+                <li>Marco</li>
+                <li>Mic test</li>
+                <li>I’m sad</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MeditateZone | All Rights Reserved | Sunny Kumar</p>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="speech.js"></script>
+</body>
+</html>

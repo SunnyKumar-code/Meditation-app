@@ -1,18 +1,12 @@
-// Hamburger Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const hamburgerMenu = document.querySelector('.fa-bars');
 const cross = document.querySelector('.fa-xmark');
 
-// Hamburger menu toggle functionality
 hamburger.addEventListener("click", () => {
-    setTimeout(() => {
-        hamburgerMenu.style.display =
-            hamburgerMenu.style.display === "none" ? "block" : "none";
-        cross.style.display =
-            cross.style.display === "block" ? "none" : "block";
-        menu.classList.toggle("active");
-    }, 200);
+    hamburgerMenu.style.display = hamburgerMenu.style.display === "none" ? "block" : "none";
+    cross.style.display = cross.style.display === "block" ? "none" : "block";
+    menu.classList.toggle("active");
 });
 
 // Function to reset and play video/audio
