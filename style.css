@@ -97,17 +97,23 @@ body {
     transition: transform 1s ease;
 }
 
-
+.heading1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+}
 /* Hero Content */
-.hero-content h1 {
-    font-size: 3.5em;
+.heading1 p {
+   
     text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #fc7b03;
     margin-bottom: 20px;
 }
 
-.hero-content h1 span {
+.heading1 .name{
     color: #03fc03; /* Bright purple */
-    text-transform: uppercase;
+    text-transform: uppercase;   
     text-shadow: 0 0 15px #000000;
 }
 

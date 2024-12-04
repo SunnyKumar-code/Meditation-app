@@ -124,7 +124,7 @@ userName.addEventListener('click', () => {
         userName.innerHTML = name.trim(); // Update the UI with the new name
     } else {
         // If input is invalid or canceled, reset the text
-        userName.innerHTML = "User Name";
+        userName.innerHTML = "Enter Name";
         localStorage.removeItem('userName'); // Optionally clear the stored value
     }
 });
@@ -145,7 +145,7 @@ function displayGreeting() {
         greetingMessage = "Good Night";
     }
 
-    greeting.innerHTML = `${greetingMessage}, <span id="user-name">${localStorage.getItem('userName') || 'Your Name'}</span>`;
+    greeting.innerHTML = `${greetingMessage} , `;
 }
 document.addEventListener('DOMContentLoaded', displayGreeting);
 

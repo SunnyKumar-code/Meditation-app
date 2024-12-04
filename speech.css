@@ -113,7 +113,7 @@ ul li {
 
 #speechOutput {
     font-size: 1.2em;
-    color: #ffcc00; /* Light yellow for speech output */
+    color: #ece921; /* Light yellow for speech output */
 }
 .text{
     display: none;
@@ -128,14 +128,18 @@ ul li {
     border-radius: 10px;
 }
 .text-div{
-    background-color: #ffcc00;
-    padding: 10px;
-    margin-bottom: 10px;
     border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
 }
 .text-p{
-    text-align: right;
-    background-color: #ffcc00;
+    display: inline;
+    text-align: left;
+    background-color: #00ff00;
+    color: #000;
     padding: 10px;
     border-radius: 20px;
 
@@ -153,6 +157,7 @@ ul li {
     outline: none;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
 }
 
 /* Hover effect */

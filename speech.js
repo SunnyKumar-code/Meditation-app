@@ -72,8 +72,11 @@ async function getJoke() {
         const p = document.createElement('p');
         p.className="text-p";
         p.innerText = `${data[0].joke} 😂😂`;
+        div.style.justifyContent= "flex-start";
         texts.appendChild(div);
         div.appendChild(p);
+       speakResponse(data[0].joke)
+
     } catch (error) {
         console.error("Error fetching joke:", error);
         speechOutput.textContent = "Oops! Couldn't load a joke.";
@@ -191,7 +194,7 @@ function respondToCommand(command) {
     const p = document.createElement('p');
     p.className = "text-p";
     p.innerText = responseText;
-    p.style.textAlign = "left";
+    div.style.justifyContent= "flex-start";
 
     texts.appendChild(div);
     div.appendChild(p);
@@ -226,7 +229,7 @@ async function ai(command) {
         const p = document.createElement('p');
         p.className = "text-p";
         p.innerText = aiResponse;
-        p.style.textAlign = "left";
+        div.style.justifyContent= "flex-start";
 
         texts.appendChild(div);
         div.appendChild(p);
