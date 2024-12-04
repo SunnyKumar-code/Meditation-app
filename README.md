@@ -47,17 +47,17 @@ Access the app here: [MeditateZon](https://meditatezone.netlify.app)
 
 ## 📸 Screenshots
 1. **Index Page**  
-   ![Index Page](./screenshort/1.png) _(Add a screenshot URL if available)_  
+   ![Index Page](./screenshort/1.png) 
 2. **Music Page**  
-   ![Music Page](./screenshort/2.png) _(Add a screenshot URL if available)_  
+   ![Music Page](./screenshort/2.png) 
 3. **Scene Page**  
-   ![Scene Page](./screenshort/3.png) _(Add a screenshot URL if available)_  
+   ![Scene Page](./screenshort/3.png) 
 4. **Breath Page**  
-   ![Breath Page](./screenshort/4.png) _(Add a screenshot URL if available)_  
+   ![Breath Page](./screenshort/4.png)  
 5. **Chat Bot Page**  
-   ![Chat Bot Page](./screenshort/5.png) _(Add a screenshot URL if available)_
+   ![Chat Bot Page](./screenshort/5.png) 
 6. **Chat Bot Page**  
-    ![Chat Bot Page](./screenshort/6.png) _(Add a screenshot URL if available)_
+    ![Chat Bot Page](./screenshort/6.png) 
 
 
 ---
@@ -83,7 +83,7 @@ Access the app here: [MeditateZon](https://meditatezone.netlify.app)
 ## 👨‍💻 Developer
 **Sunny Kumar**  
 - GitHub: [SunnyKumar-code](https://github.com/SunnyKumar-code)  
-- LinkedIn: [Your LinkedIn Profile](#) _(Add your LinkedIn link)_
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/sunny-kumar-coder/)
 
 ---
 
