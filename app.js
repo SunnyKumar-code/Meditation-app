@@ -129,8 +129,16 @@ userName.addEventListener('click', () => {
     }
 });
 
-// Display greeting based on the current time
 
+// Show loading screen for 3 seconds, then display the main content
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.getElementById('loadingScreen').style.display = 'none'; // Hide loading screen
+      document.getElementById('mainContent').style.display = 'block'; // Show main content
+    }, 2000); // 3000ms = 3 seconds
+  });
+  
 function displayGreeting() {
     const currentTime = new Date().getHours();
     let greetingMessage;
