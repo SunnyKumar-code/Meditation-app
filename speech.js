@@ -11,12 +11,49 @@ hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
 });
 
+
 // Elements for speech recognition
 const micButton = document.getElementById('micButton');
 const speechDisplay = document.getElementById('speechDisplay');
 const task = document.getElementById('task');
 const texts = document.getElementById('texts');
 const speechOutput = document.getElementById('speechOutput');
+const voiceSelect = document.getElementById('voiceSelect');
+
+// Populate the dropdown with available voices
+function populateVoiceList() {
+    const voices = speechSynthesis.getVoices();
+    voices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice.name;
+        option.textContent = `${voice.name} (${voice.lang})`;
+        voiceSelect.appendChild(option);
+    });
+}
+
+// Ensure voices are loaded (some browsers load asynchronously)
+speechSynthesis.onvoiceschanged = populateVoiceList;
+
+// Use the selected voice for speech synthesis
+function speakResponse(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US'; // Default language
+    utterance.rate = 1; // Speed of speech
+    utterance.pitch = 1; // Pitch of the voice
+
+    // Set the selected voice
+    const selectedVoiceName = voiceSelect.value;
+    const voices = speechSynthesis.getVoices();
+    const selectedVoice = voices.find(voice => voice.name === selectedVoiceName);
+    if (selectedVoice) {
+        utterance.voice = selectedVoice;
+    }
+
+    // Speak the text
+    speechSynthesis.speak(utterance);
+}
+
+
 
 
 // Joke Fetching Function
@@ -48,34 +85,7 @@ async function getJoke() {
         const genAI = new GoogleGenerativeAI(API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
-        document.getElementById("generateTrip").addEventListener("click", async function () {
-          const destination = document.getElementById("Destination").value.trim();
-          const startDate = document.getElementById("Start-Date").value;
-          const endDate = document.getElementById("End-Date").value;
-      
-          if (!destination || !startDate || !endDate) {
-              alert("Please fill all fields!");
-              return;
-          }
-      
-          const loading = document.getElementById("loading");
-          const itineraryBox = document.getElementById("itinerary");
-      
-          // Show the loading indicator
-          loading.style.display = "block";
-          itineraryBox.style.display = "none";
-      
-          const prompt = `Create a detailed day-by-day trip itinerary for a vacation to ${destination} from ${startDate} to ${endDate}. Format the output in HTML tags with headings for each day, lists for recommendations, and include vibrant inline styling for colors.`;
-      
-          try {
-              const result = await model.generateContent(prompt);
-              
-          } catch (error) {
-              console.error("Error generating itinerary:", error);
-              loading.style.display = "none";
-              alert("Failed to generate itinerary. Please try again.");
-          }
-      });
+        
       
 
 // Initialize speech recognition
@@ -116,55 +126,80 @@ recognition.addEventListener('result', (event) => {
     texts.appendChild(div);
     div.appendChild(p);
     
+
+    
     // Respond to specific speech commands
     respondToCommand(text.toLowerCase());
 });
 
 // Function to respond to specific commands
+// Function to respond to specific commands
 function respondToCommand(command) {
-    console.log(command);
- 
-    
+    let responseText = "";
+
     if (command.includes('hello')) {
-        speechOutput.textContent = 'Hello! How can I assist you today?';
-        const div = document.createElement('div');
-    div.className="text-div";
+        responseText = 'Hello! How can I assist you today?';
+    } else if (command.includes('open google')) {
+        responseText = 'Opening Google.';
+        window.open('https://www.google.com', '_blank');
+    } else if (command.includes('open youtube')) {
+        responseText = 'Opening YouTube.';
+        window.open('https://www.youtube.com', '_blank');
+    } else if (command.includes('open twitter')) {
+        responseText = 'Opening Twitter.';
+        window.open('https://www.twitter.com', '_blank');
+    } else if (command.includes('open facebook')) {
+        responseText = 'Opening Facebook.';
+        window.open('https://www.facebook.com', '_blank');
+    } else if (command.includes('open instagram')) {
+        responseText = 'Opening Instagram.';
+        window.open('https://www.instagram.com', '_blank');
+    } else if (command.includes('open github')) {
+        responseText = 'Opening GitHub.';
+        window.open('https://www.github.com', '_blank');
+    } else if (command.includes('open w3schools')) {
+        responseText = 'Opening W3Schools.';
+        window.open('https://www.w3schools.com', '_blank');
+    } else if (command.includes('open stackoverflow')) {
+        responseText = 'Opening StackOverflow.';
+        window.open('https://www.stackoverflow.com', '_blank');
+    } else if (command.includes('open spotify')) {
+        responseText = 'Opening Spotify.';
+        window.open('https://www.spotify.com', '_blank');
+    } else if (command.includes('open wikipedia')) {
+        responseText = 'Opening Wikipedia.';
+        window.open('https://www.wikipedia.org', '_blank');
+    } else if (command.includes('tell me a joke')) {
+        getJoke(); // Fetch a joke dynamically
+        return; // Exit since the joke function handles the response
+    } else if (command.includes('what is the time')) {
+        const currentTime = new Date().toLocaleTimeString();
+        responseText = `The current time is ${currentTime}.`;
+    } else if (command.trim().length > 0) {
+        ai(command);
+        return; // Exit as the AI handles the response
+    } else {
+        responseText = 'Sorry, I didn’t understand that. Can you try again?';
+    }
+
+    // Display the response text
+    speechOutput.textContent = responseText;
+
+    // Add response to the chat display
+    const div = document.createElement('div');
+    div.className = "text-div";
     const p = document.createElement('p');
-    p.className="text-p";
-    p.innerText = " ";
+    p.className = "text-p";
+    p.innerText = responseText;
+    p.style.textAlign = "left";
 
     texts.appendChild(div);
     div.appendChild(p);
-    } else if (command.includes('open google')) {
-        window.open('https://www.google.com', '_blank');
-        const div = document.createElement('div');
-        div.className="text-div";
-        const p = document.createElement('p');
-        p.className="text-p";
-        p.innerText = " ";
-    
-        texts.appendChild(div);
 
-    } else if (command.includes('open youtube')) {
-        window.open('https://www.youtube.com', '_blank');
-        const div = document.createElement('div');
-        div.className="text-div";
-        const p = document.createElement('p');
-        p.className="text-p";
-        p.innerText = " ";
-    
-        texts.appendChild(div);
-    } else if (command.includes('tell me a joke')) {
-        getJoke(); // Fetch a joke dynamically
-    } else if (command.includes('tell me a quote')) {
-        speechOutput.textContent = 'The only limit to our realization of tomorrow is our doubts of today. - Franklin D. Roosevelt';
-    } else if (command.includes('what is the time')) {
-        const currentTime = new Date().toLocaleTimeString();
-        speechOutput.textContent = `The current time is ${currentTime}.`;
-    } else {
-        speechOutput.textContent = 'Sorry, I didn’t understand that. Can you try again?';
-    }
+    // Speak the response text
+    speakResponse(responseText);
 }
+
 
 // Handle speech recognition end
 recognition.addEventListener('end', () => {
@@ -177,3 +212,33 @@ recognition.addEventListener('end', () => {
 recognition.addEventListener('error', (event) => {
     speechOutput.textContent = 'Sorry, I couldn’t hear you. Please try again.';
 });
+async function ai(command) {
+    const prompt = `${command}`;
+    try {
+        const result = await model.generateContent(prompt);
+        const aiResponse = result.response.text();
+        
+        console.log(aiResponse);
+
+        // Add AI response to the chat display
+        const div = document.createElement('div');
+        div.className = "text-div";
+        const p = document.createElement('p');
+        p.className = "text-p";
+        p.innerText = aiResponse;
+        p.style.textAlign = "left";
+
+        texts.appendChild(div);
+        div.appendChild(p);
+
+        // Speak the AI response
+        speakResponse(aiResponse);
+    } catch (error) {
+        console.error("Error:", error);
+        const errorMessage = "Failed to generate a response. Please try again.";
+        speechOutput.textContent = errorMessage;
+        speakResponse(errorMessage);
+    }
+}
+
+

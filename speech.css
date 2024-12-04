@@ -118,6 +118,7 @@ ul li {
 .text{
     display: none;
     flex-direction: column;
+    gap:20px;
     width: 90%;
     padding:10px ;
     margin: 20px;
@@ -125,4 +126,52 @@ ul li {
     font-weight: 600;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     border-radius: 10px;
+}
+.text-div{
+    background-color: #ffcc00;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+.text-p{
+    text-align: right;
+    background-color: #ffcc00;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+#voiceSelect {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+#voiceSelect:hover {
+    border-color: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus effect */
+#voiceSelect:focus {
+    border-color: #45a049;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(72, 239, 128, 0.5);
+}
+
+/* Option styling (optional for better visuals) */
+#voiceSelect option {
+    padding: 10px;
+    background: #fff;
+    color: #333;
 }
