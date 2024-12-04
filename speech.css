@@ -117,11 +117,11 @@ ul li {
 }
 .text{
     display: none;
+    flex-direction: column;
     width: 90%;
     padding:10px ;
     margin: 20px;
-    background-color: #fff;
-    color: #333;
+    background-color: #333;
     font-weight: 600;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     border-radius: 10px;

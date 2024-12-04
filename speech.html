@@ -44,7 +44,6 @@
         </div>
         <div class="text" id="texts">
             <!-- Your chat messages will be displayed here -->
-            <p>Hello, I'm MeditateZone!</p>
         </div>
         <div class="tasks" id="task">
             <!-- Greetings Section -->
@@ -158,6 +157,13 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
-    <script src="speech.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script type="module" src="speech.js"></script>
 </body>
 </html>
